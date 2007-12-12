@@ -1,7 +1,7 @@
 Summary:	A WindowMaker dock.app that displays a rotating Earth in an icon
 Name:		wmglobe
 Version: 1.3
-Release: 5mdk
+Release: %mkrel 5
 License:	GPL
 Group:		Graphical desktop/WindowMaker
 
