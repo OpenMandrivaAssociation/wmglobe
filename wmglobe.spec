@@ -39,14 +39,15 @@ install -d %buildroot/%_mandir/man1
 install wmglobe %buildroot/%_bindir
 install wmglobe.1 %buildroot/%_mandir/man1
 
-install -d %buildroot/%_menudir
-cat << EOF > %buildroot/%_menudir/%name
-?package(%{name}):command="wmglobe -delay 0 -dlong 5 -bord 2" \
-icon="%{name}.png" \
-needs="X11" \
-section="Applications/Sciences/Astronomy" \
-title="WmGlobe" \
-longtitle="A dock.app that displays a rotating Earth in an icon"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%name.desktop
+[Desktop Entry]
+Type=Application
+Exec=wmglobe -delay 0 -dlong 5 -bord 2
+Icon=%{name}
+Categories=Science;Astronomy;
+Name=WmGlobe
+Comment=A dock.app that displays a rotating Earth in an icon
 EOF
 
 %post
@@ -66,6 +67,6 @@ rm -fr %buildroot
 %_liconsdir/%name.png
 %_miconsdir/%name.png
 %_iconsdir/%name.png
-%_menudir/%name
+%{_datadir}/applications/mandriva-%name.desktop
 
 
