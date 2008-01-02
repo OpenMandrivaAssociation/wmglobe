@@ -10,6 +10,7 @@ Source1:	%name-icons.tar.bz2
 
 URL:		http://perso.linuxfr.org/jdumont/wmg/
 BuildRequires:	WindowMaker-devel, xpm-devel, libpng-devel, libtiff-devel, libjpeg-devel
+BuildRoot:	%_tmppath/%name-%version-%release-root
 
 %description
 WMGlobe is a WindowMaker dock.app that displays a rotating Earth in an icon.
