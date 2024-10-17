@@ -8,7 +8,7 @@ Group:		Graphical desktop/WindowMaker
 Source:		%name-%version.tar.bz2
 Source1:	%name-icons.tar.bz2
 
-URL:		http://perso.linuxfr.org/jdumont/wmg/
+URL:		https://perso.linuxfr.org/jdumont/wmg/
 BuildRequires:	WindowMaker-devel, xpm-devel, libpng-devel, libtiff-devel, libjpeg-devel
 BuildRoot:	%_tmppath/%name-%version-%release-root
 
