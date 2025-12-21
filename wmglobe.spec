@@ -9,6 +9,7 @@ Source:		%name-%version.tar.bz2
 Source1:	%name-icons.tar.bz2
 
 URL:		https://perso.linuxfr.org/jdumont/wmg/
+BuildRequires:	make
 BuildRequires:	WindowMaker-devel, xpm-devel, libpng-devel, libtiff-devel, libjpeg-devel
 BuildRoot:	%_tmppath/%name-%version-%release-root
 
